@@ -1,0 +1,75 @@
+/* Background */
+.register-bg {
+  background: linear-gradient(to right, #1a1a1a, #333); /* Dark gradient */
+  height: 140vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+.register-neon-card {
+  background: #222; /* Dark card background */
+  color: white; /* White text */
+  border-radius: 55px;
+  overflow: hidden;
+  max-height: 100%;
+  border: 1px solid rgb(71, 186, 214);
+  box-shadow: 0 0 10px rgb(71, 186, 214);
+  transition: transform 0.3s ease-in-out;
+}
+
+.register-neon-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #0ff, 0 0 40px rgb(0, 0, 0);
+}
+
+/* Input Fields */
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #555;
+  color: white; /* White input text */
+  transition: 0.3s;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Light gray placeholder */
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(71, 186, 214, 0.7);
+  color: white;
+}
+
+/* Submit Button */
+.register-btn {
+  font-size: 20px;
+  font-family: sans-serif;
+  background: #ff5e62;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+  background: #0a2185 !important;
+  color: white !important;
+  transform: scale(1.05);
+}
+
+/* Links */
+.text-blue {
+  color: #4db8ff !important;
+}
+
+.text-blue:hover {
+  color: #1e90ff !important;
+}
+
+/* Adjust the container */
+.register-form-container {
+  width: 400px;
+  max-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}

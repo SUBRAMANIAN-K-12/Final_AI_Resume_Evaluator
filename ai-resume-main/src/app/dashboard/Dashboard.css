@@ -1,0 +1,221 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 80px; /* Default collapsed width */
+  background: #000000;
+  height: 100vh;
+  padding: 20px;
+  transition: width 0.3s white ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 76;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.menu-btn {
+  background: transparent;
+  color: #0ff;
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  margin-top: 30px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+
+
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  margin-left: 80px; /* Default space for collapsed sidebar */
+  overflow-y: auto;
+  height: 100vh;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.main-content.shift {
+  margin-left: 250px;
+}
+
+.neon-title {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+}
+
+.neon-text {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #bbb;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card-container {
+  flex: 1; /* Make all cards take equal width */
+  max-width: 300px; /* Control the maximum width of each card */
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-card .neon-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.neon-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.feature-card {
+  text-decoration: none;
+}
+
+.neon-card {
+  background: #222;
+  color: #fff;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.neon-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #0ff, 0 0 40px #00f;
+}
+
+.neon-card-title {
+  text-align: center !important;
+  font-weight: bold;
+}
+
+.card-img {
+  width: 100%; 
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(0.8);
+
+}
+
+
+.welcome-popup {
+  position: absolute;
+  text-align: center ;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0ff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00f;
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.sidebar-user {
+  text-align: center;
+  margin-top: 25px;
+  padding: 15px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out; /* Add smooth transition */
+  opacity: 0; /* Hidden by default */
+}
+
+.sidebar.open .sidebar-user {
+  opacity: 1; /* Visible when sidebar is open */
+}
+
+.username {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.username-highlight {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #007bff;
+}
+.top-right-username {
+  position: absolute;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  gap: 6px;
+  right: 60px;
+  font-size: 26px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  padding: 10px 15px; /* Adjust padding */
+  border-radius: 5px; /* Optional: adds rounded corners */
+  margin-top: 10px;
+  width: fit-content;
+}
+ 
+.username-highlight {
+  font-weight: bold;
+  font-size: 1em;
+  color: #ffffff;
+}
+ 
+.username-highlight,
+.top-right-username {
+  align-items: center;
+  display: flex; /* Ensure consistent flex display */
+}
